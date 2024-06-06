@@ -1,95 +1,43 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { FacebookIcon, InstagramIcon, TiktokIcon } from './components/icons'
+import LinktreeItem from './components/linktree-item'
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main className='linktree'>
+			<div className='linktree__container'>
+				<img src='/logo.png' alt='' className='linktree__logo' />
+				<ul className='linktree__links__list'>
+					<LinktreeItem text='Portafolio' url='#' />
+					<LinktreeItem text='Servicios' url='#' />
+					<LinktreeItem text='Whatsapp 1' url='#' />
+					<LinktreeItem text='Whatsapp 2' url='#' />
+				</ul>
+				<div className='linktree__socials'>
+					<a href='#' className='linktree__socials__link'>
+						<InstagramIcon styles='linktree__socials__icon' />
+					</a>
+					<a href='#' className='linktree__socials__link'>
+						<FacebookIcon styles='linktree__socials__icon' />
+					</a>
+					<a href='#' className='linktree__socials__link'>
+						<TiktokIcon styles='linktree__socials__icon' />
+					</a>
+				</div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+				<div className='linktree__shape'>
+					<svg
+						data-name='Layer 1'
+						xmlns='http://www.w3.org/2000/svg'
+						viewBox='0 0 1200 120'
+						preserveAspectRatio='none'
+					>
+						<path
+							d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z'
+							className='shape-fill'
+						></path>
+					</svg>
+				</div>
+			</div>
+		</main>
+	)
 }
